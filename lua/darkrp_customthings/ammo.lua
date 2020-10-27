@@ -80,3 +80,147 @@ DarkRP.createAmmoType("smg1", {
 
 Add new ammo types under the next line!
 ---------------------------------------------------------------------------]]
+
+DarkRP.createAmmoType("357", {
+    name = ".357 Ammo",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 10,
+    amountGiven = 16,
+    category = "Pistol Ammo"
+})
+
+DarkRP.createAmmoType("pistol", {
+    name = "Pistol Rounds",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 30,
+    amountGiven = 10,
+    category = "Pistol Ammo"
+})
+
+DarkRP.createAmmoType("Harpoon", {
+    name = "Harpoons",
+    model = "models/props_junk/harpoon002a.mdl",
+    price = 50,
+    amountGiven = 1,
+    category = "Specialty Ammo"
+})
+
+DarkRP.createAmmoType("40mmGrenade", {
+    name = "40mm Grenades",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 3,
+    amountGiven = 500,
+    category = "Specialty Ammo"
+})
+
+DarkRP.createAmmoType("frags", {
+    name = "Frag Grenades",
+    model = "models/props_junk/cardboard_box001a.mdl",
+    price = 500,
+    amountGiven = 1,
+    category = "Specialty Ammo"
+})
+
+DarkRP.createAmmoType("proxmines", {
+    name = "Proximity Mine",
+    model = "models/props_junk/cardboard_box001a.mdl",
+    price = 750,
+    amountGiven = 1,
+    category = "Specialty Ammo"
+})
+
+DarkRP.createAmmoType("rockets", {
+    name = "Rockets",
+    model = "models/props_junk/cardboard_box001a.mdl",
+    price = 250,
+    amountGiven = 1,
+    category = "Specialty Ammo"
+})
+
+DarkRP.createAmmoType("Improvised_Explosive", {
+    name = "IED",
+    model = "models/props_junk/cardboard_box001a.mdl",
+    price = 2000,
+    amountGiven = 3,
+    category = "Specialty Ammo"
+})
+
+DarkRP.createAmmoType("c4", {
+    name = "C4",
+    model = "models/props_junk/cardboard_box001a.mdl",
+    price = 1000,
+    amountGiven = 1,
+    category = "Specialty Ammo"
+})
+
+DarkRP.createAmmoType("nervegas", {
+    name = "Nerve gas",
+    model = "models/props_junk/cardboard_box001a.mdl",
+    price = 2500,
+    amountGiven = 2,
+    category = "Specialty Ammo"
+})
+
+DarkRP.createAmmoType("Nuclear_Warhead", {
+    name = "Nuclear Missile",
+    model = "models/props_junk/cardboard_box001a.mdl",
+    price = 1500000,
+    amountGiven = 1,
+    category = "Specialty Ammo"
+})
+
+DarkRP.createAmmoType("orbitalstrike", {
+    name = "Orbital Strike",
+    model = "models/props_junk/cardboard_box001a.mdl",
+    price = 250000,
+    amountGiven = 1,
+    category = "Specialty Ammo"
+})
+
+DarkRP.createAmmoType("ar2", {
+    name = "Assault Rifle Ammo",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 25,
+    amountGiven = 45,
+    category = "Weapon Ammo"
+})
+
+DarkRP.createAmmoType("buckshot", {
+    name = "Buckshot",
+    model = "models/Items/BoxBuckshot.mdl",
+    price = 100,
+    amountGiven = 12,
+    category = "Weapon Ammo"
+})
+
+DarkRP.createAmmoType("SniperPenetratedRound", {
+    name = "Sniper Rounds",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 50,
+    amountGiven = 10,
+    category = "Weapon Ammo"
+})
+
+DarkRP.createAmmoType("smg", {
+    name = "SMG Rounds",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 45,
+    amountGiven = 40,
+    category = "Weapon Ammo"
+})
+
+DarkRP.createAmmoType("StickyGrenade", {
+    name = "Sticky Grenade",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 100,
+    amountGiven = 1,
+    category = "Specialty Ammo"
+})
+
+DarkRP.createAmmoType("AirboatGun", {
+    name = "Winchester Ammo",
+    model = "models/Items/BoxMRounds.mdl",
+    price = 12,
+    amountGiven = 10,
+    category = "Weapon Ammo"
+})
