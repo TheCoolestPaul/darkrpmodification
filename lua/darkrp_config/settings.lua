@@ -229,7 +229,7 @@ GM.Config.maxvehicles                   = 1
 -- microwavefoodcost - Sets the sale price of Microwave Food.
 GM.Config.microwavefoodcost             = 30
 -- minlotterycost - Minimum payment the mayor can set to join a lottery.
-GM.Config.minlotterycost                = 1
+GM.Config.minlotterycost                = 5
 -- Money packets will get removed if they don't get picked up after a while. Set to 0 to disable.
 GM.Config.moneyRemoveTime               = 600
 -- mprintamount - Value of the money printed by the money printer.

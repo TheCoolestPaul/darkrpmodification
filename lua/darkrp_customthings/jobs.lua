@@ -88,13 +88,33 @@ TEAM_DRUG = DarkRP.createJob("Drug Dealer", {
     category = "Citizens"
 })
 
+TEAM_CITYWORKER = DarkRP.createJob("City Worker", {
+    name = "City Worker",
+    color = Color( 5, 140, 0, 255 ),
+    model = {
+        "models/player/group01/male_01.mdl",
+        "models/player/group01/male_02.mdl",
+        "models/player/group01/male_03.mdl",
+    },
+    description = [[You maintain the city. Clean rubble, fix leaks, and work on electrical faults for money.]],
+    weapons = { "cityworker_pliers", "cityworker_shovel", "cityworker_wrench" },
+    command = "cityworker",
+    max = 0,
+    salary = 15,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = false,
+    category = "Citizens"
+})
+
 TEAM_IA = DarkRP.createJob("State Officer", {
     color = Color(0, 0, 255, 255),
     model = {
-        "models/player/guerilla.mdl",
-        "models/player/gasmask.mdl"
+        "models/player/gasmask.mdl",
+        "models/player/guerilla.mdl"
     },
-    description = [[Your authority is beyond the Mayor. Maintain Justice in this city.]],
+    description = [[Your authority is beyond the Mayor. Maintain Justice in this city. Fight corruption.]],
     weapons = {"m9k_colt1911", "weapon_cuff_police"},
     command = "policeadmin",
     max = 0,
@@ -108,7 +128,7 @@ TEAM_IA = DarkRP.createJob("State Officer", {
         ["m9k_ammo_pistol"] = 35
     },
     PlayerSpawn = function(ply)
-        ply:SetArmor(50)
+        ply:SetArmor(100)
     end
 })
 
@@ -225,7 +245,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
 TEAM_HOBOK = DarkRP.createJob("Hobo King", {
     color = Color(0, 0, 0, 255),
     model = {"models/player/charple.mdl"},
-    description = [[You've earned this role through countless murders.. (6)... but can you maintain it? Or loose it terribly?]],
+    description = [[You've earned this role through countless murders(6)... but can you maintain it? Or loose it terribly?]],
     weapons = {"m9k_fists", "weapon_angryhoboking"},
     command = "hobok",
     max = 1,
@@ -238,7 +258,7 @@ TEAM_HOBOK = DarkRP.createJob("Hobo King", {
     customCheck = function(ply) 
         return table.HasValue({TEAM_HOBO}, ply:Team())
     end,
-    CustomCheckFailMsg = "You're not a god",
+    CustomCheckFailMsg = "You haven't met the real god.",
 })
 
 TEAM_MAYOR = DarkRP.createJob("Mayor", {
