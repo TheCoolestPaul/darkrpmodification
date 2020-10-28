@@ -17,7 +17,17 @@ https://darkrp.miraheze.org/wiki/DarkRP:CustomShipmentFields
 
 Add shipments and guns under the following line:
 ---------------------------------------------------------------------------]]
-
+DarkRP.createShipment("Basic Handcuffs", {
+    model = "models/weapons/w_crowbar.mdl",
+    entity = "weapon_cuff_standard",
+    amount = 10,
+    price = 180,
+    separate = true,
+    pricesep = 20,
+    noship = false,
+    category = "Lockpicks",
+    allowed = {TEAM_BMD}
+})
 DarkRP.createShipment("Basic Lockpick", {
     model = "models/weapons/w_crowbar.mdl",
     entity = "cat1_tpick1",
