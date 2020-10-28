@@ -118,7 +118,7 @@ TEAM_IA = DarkRP.createJob("State Officer", {
     weapons = {"m9k_colt1911", "weapon_cuff_police"},
     command = "policeadmin",
     max = 0,
-    salary = 50,
+    salary = 60,
     admin = 2,
     vote = false,
     hasLicense = true,
@@ -280,6 +280,88 @@ TEAM_MAYOR = DarkRP.createJob("Mayor", {
     }
 })
 
+TEAM_GROVE = DarkRP.createJob("Grove Gangster", {
+    color = Color(0, 255, 30, 255),
+    model = {
+        "models/gang_groove/gang_1.mdl",
+        "models/gang_groove/gang_2.mdl",
+        "models/gang_chem/gang_groove_chem.mdl",
+        "models/gang_groove_boss/gang_groove_boss.mdl"
+    },
+    description = [[You are a gang member of the Grove Gang. You are KoS with the Ballas Gang.]],
+    weapons = {},
+    command = "grove_gang",
+    max = 5,
+    salary = 15,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    category = "Citizens"
+})
+
+TEAM_GROVE_BOSS = DarkRP.createJob("Grove Boss", {
+    color = Color(0, 255, 30, 255),
+    model = {
+        "models/gang_groove/gang_1.mdl",
+        "models/gang_groove/gang_2.mdl",
+        "models/gang_chem/gang_groove_chem.mdl",
+        "models/gang_groove_boss/gang_groove_boss.mdl"
+    },
+    description = [[You are a gang boss of the Grove Gang. You are KoS with the Ballas Gang.]],
+    weapons = {},
+    command = "grove_gang_boss",
+    max = 1,
+    salary = 15,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    category = "Citizens",
+    NeedToChangeFrom = TEAM_GROVE
+})
+
+TEAM_BALLAS = DarkRP.createJob("Ballas Gangster", {
+    color = Color(255, 0, 30, 255),
+    model = {
+        "models/gang_ballas/gang_ballas_1.mdl",
+        "models/gang_ballas/gang_ballas_2.mdl",
+        "models/gang_ballas_boss/gang_ballas_boss.mdl",
+        "models/gang_ballas_chem/gang_ballas_chem.mdl"
+    },
+    description = [[You are a gang member of the Ballas Gang. You are KoS with the Grove Gang.]],
+    weapons = {},
+    command = "balla_gang",
+    max = 5,
+    salary = 15,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    category = "Citizens"
+})
+
+TEAM_BALLAS_BOSS = DarkRP.createJob("Ballas Boss", {
+    color = Color(255, 0, 30, 255),
+    model = {
+        "models/gang_ballas/gang_ballas_1.mdl",
+        "models/gang_ballas/gang_ballas_2.mdl",
+        "models/gang_ballas_boss/gang_ballas_boss.mdl",
+        "models/gang_ballas_chem/gang_ballas_chem.mdl"
+    },
+    description = [[You are a gang boss of the Ballas Gang. You are KoS with the Grove Gang.]],
+    weapons = {},
+    command = "balla_gang_boss",
+    max = 1,
+    salary = 15,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    category = "Citizens",
+    NeedToChangeFrom = TEAM_BALLAS
+})
+
 --[[---------------------------------------------------------------------------
 Define which team joining players spawn into and what team you change to if demoted
 ---------------------------------------------------------------------------]]
@@ -294,6 +376,7 @@ GAMEMODE.CivilProtection = {
     [TEAM_SWATC] = true,
     [TEAM_CHIEF] = true,
     [TEAM_MAYOR] = true,
+    [TEAM_IA] = true,
 }
 --[[---------------------------------------------------------------------------
 Jobs that are hitmen (enables the hitman menu)
