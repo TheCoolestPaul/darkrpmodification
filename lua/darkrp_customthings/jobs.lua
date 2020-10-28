@@ -59,7 +59,7 @@ TEAM_SHITMAN = DarkRP.createJob("Hitman", {
         "models/player/group01/male_02.mdl",
         "models/player/group01/male_03.mdl"
     },
-    description = [[Kill all players.]],
+    description = [[Kill all players, for money of course...]],
     weapons = {"slownls_hitman_binoculars", "slownls_hitman_tablet"},
     command = "slownls_hitman",
     max = 4,
@@ -76,7 +76,7 @@ TEAM_DRUG = DarkRP.createJob("Drug Dealer", {
         "models/player/soldier_stripped.mdl",
         "models/player/voikanaa/snoop_dogg.mdl"
     },
-    description = [[You work with drugs. It can be a passion or a drive for money, whatever you do, don't let the police see.]],
+    description = [[You work with drugs. It can be a passion or a drive for money, whatever you do, just don't let the police see.]],
     weapons = {},
     command = "drug_dealer",
     max = 0,
