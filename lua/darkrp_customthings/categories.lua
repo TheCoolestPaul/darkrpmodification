@@ -79,6 +79,15 @@ DarkRP.createCategory{
 }
 
 DarkRP.createCategory{
+    name = "Other",
+    categorises = "shipments",
+    startExpanded = false,
+    color = Color(50, 50, 50, 255),
+    canSee = function(ply) return true end,
+    sortOrder = 30
+}
+
+DarkRP.createCategory{
     name = "Zero's Weed",
     categorises = "entities",
     startExpanded = false,

@@ -9,7 +9,7 @@ ENT.SeizeReward = 950
 
 local PrintMore
 function ENT:Initialize()
-    self:SetModel("models/props_c17/consolebox01a.mdl")
+    self:SetModel("models/props_c17/consolebox03a.mdl")
     self:PhysicsInit(SOLID_VPHYSICS)
     self:SetMoveType(MOVETYPE_VPHYSICS)
     self:SetSolid(SOLID_VPHYSICS)
@@ -22,7 +22,7 @@ function ENT:Initialize()
     timer.Simple(math.random(100, 350), function() PrintMore(self) end)
 
     self.sound = CreateSound(self, Sound("ambient/levels/labs/equipment_printer_loop1.wav"))
-    self.sound:SetSoundLevel(52)
+    self.sound:SetSoundLevel(50)
     self.sound:PlayEx(1, 100)
 end
 
@@ -48,11 +48,11 @@ function ENT:Destruct()
     effectdata:SetOrigin(vPoint)
     effectdata:SetScale(1)
     util.Effect("Explosion", effectdata)
-    DarkRP.notify(self:Getowning_ent(), 1, 4, DarkRP.getPhrase("money_printer_exploded"))
+    DarkRP.notify(self:Getowning_ent(), 1, 4, "Your printer blew up!")
 end
 
 function ENT:BurstIntoFlames()
-    DarkRP.notify(self:Getowning_ent(), 0, 4, DarkRP.getPhrase("money_printer_overheating"))
+    DarkRP.notify(self:Getowning_ent(), 0, 4, "Your printer is overheating!")
     self.burningup = true
     local burntime = math.random(8, 18)
     self:Ignite(burntime, 0)
