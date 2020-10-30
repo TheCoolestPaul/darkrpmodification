@@ -17,6 +17,17 @@ https://darkrp.miraheze.org/wiki/DarkRP:CustomShipmentFields
 
 Add shipments and guns under the following line:
 ---------------------------------------------------------------------------]]
+DarkRP.createShipment("Card Reader", {
+    model = "models/arc/atm_cardmachine.mdl",
+    entity = "sent_arc_pinmachine",
+    amount = 10,
+    price = 50,
+    separate = true,
+    pricesep = 50,
+    noship = true,
+    category = "Other"
+})
+
 DarkRP.createShipment("Basic Handcuffs", {
     model = "models/weapons/w_crowbar.mdl",
     entity = "weapon_cuff_standard",
