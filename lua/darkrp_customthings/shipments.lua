@@ -25,9 +25,10 @@ DarkRP.createShipment("Basic Handcuffs", {
     separate = true,
     pricesep = 20,
     noship = false,
-    category = "Lockpicks",
+    category = "Handcuffs",
     allowed = {TEAM_BMD}
 })
+
 DarkRP.createShipment("Basic Lockpick", {
     model = "models/weapons/w_crowbar.mdl",
     entity = "cat1_tpick1",
@@ -39,6 +40,7 @@ DarkRP.createShipment("Basic Lockpick", {
     category = "Lockpicks",
     allowed = {TEAM_BMD}
 })
+
 DarkRP.createShipment("Reliable Lock Pick", {
     model = "models/weapons/w_crowbar.mdl",
     entity = "cat1_tpick2",
@@ -50,6 +52,7 @@ DarkRP.createShipment("Reliable Lock Pick", {
     category = "Lockpicks",
     allowed = {TEAM_BMD}
 })
+
 DarkRP.createShipment("Advanced Lock Pick", {
     model = "models/weapons/w_crowbar.mdl",
     entity = "cat1_tpick3",
@@ -61,6 +64,7 @@ DarkRP.createShipment("Advanced Lock Pick", {
     category = "Lockpicks",
     allowed = {TEAM_BMD}
 })
+
 DarkRP.createShipment("Elite Lock Pick", {
     model = "models/weapons/w_crowbar.mdl",
     entity = "cat1_tpick4",
@@ -75,7 +79,7 @@ DarkRP.createShipment("Elite Lock Pick", {
 
 DarkRP.createShipment("Keypad Cracker", {
     model = "models/weapons/w_c4_planted.mdl",
-    entity = "weapon_sh_keypadcracker_deploy",
+    entity = "weapon_uni_cracker",
     amount = 10,
     price = 6300,
     separate = true,
@@ -84,6 +88,26 @@ DarkRP.createShipment("Keypad Cracker", {
     category = "Keypad Crackers",
     allowed = {TEAM_BMD}
 })
+
+DarkRP.createShipment("ATM Hacker", {
+    model = "models/props_lab/reciever01d.mdl",
+    entity = "weapon_arc_atmhack",
+    amount = 10,
+    price = 13500,
+    separate = true,
+    pricesep = 1500,
+    noship = false,
+    category = "Other",
+    allowed = {TEAM_BMD}
+})
+
+
+
+--[[
+
+    Begin Gun Dealer
+
+]]
 
 DarkRP.createShipment("Damascus Sword", {
     model = "models/weapons/w_knife_t.mdl",

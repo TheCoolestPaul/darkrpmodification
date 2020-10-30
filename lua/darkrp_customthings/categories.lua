@@ -61,6 +61,24 @@ DarkRP.createCategory{
 }
 
 DarkRP.createCategory{
+    name = "Handcuffs",
+    categorises = "shipments",
+    startExpanded = false,
+    color = Color(0, 0, 0, 255),
+    canSee = function(ply) return table.HasValue({TEAM_BMD}, ply:Team()) end,
+    sortOrder = 20
+}
+
+DarkRP.createCategory{
+    name = "Other",
+    categorises = "shipments",
+    startExpanded = false,
+    color = Color(0, 0, 0, 255),
+    canSee = function(ply) return table.HasValue({TEAM_BMD}, ply:Team()) end,
+    sortOrder = 25
+}
+
+DarkRP.createCategory{
     name = "Zero's Weed",
     categorises = "entities",
     startExpanded = false,

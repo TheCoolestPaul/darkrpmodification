@@ -77,7 +77,7 @@ TEAM_DRUG = DarkRP.createJob("Drug Dealer", {
         "models/player/voikanaa/snoop_dogg.mdl"
     },
     description = [[You work with drugs. It can be a passion or a drive for money, whatever you do, just don't let the police see.]],
-    weapons = {},
+    weapons = {"zmlab_extractor"},
     command = "drug_dealer",
     max = 0,
     salary = 15,
@@ -139,7 +139,7 @@ TEAM_POLICE = DarkRP.createJob("Police", {
         "models/player/police_fem.mdl"
     },
     description = [[Uphold the laws of the land to the best of your ability. Police brutality is sometimes needed and justified to maintain the order in these streets.]],
-    weapons = {"m9k_colt1911", "weapon_cuff_police"},
+    weapons = {"m9k_colt1911", "weapon_cuff_police", "zwf_sniffer"},
     command = "police",
     max = 6,
     salary = 50,
@@ -163,7 +163,7 @@ TEAM_CHIEF = DarkRP.createJob("Police Chief", {
         "models/player/combine_soldier.mdl"
     },
     description = [[You command those that uphold the laws of this land. Lead to the best of your abilities, everything you and your subordinates do reflect you. Do your best to shine above the filth.]],
-    weapons = {"m9k_colt1911", "weapon_cuff_police"},
+    weapons = {"m9k_colt1911", "weapon_cuff_police", "zwf_sniffer"},
     command = "police_chief",
     max = 1,
     salary = 70,
@@ -188,7 +188,7 @@ TEAM_SWAT = DarkRP.createJob("SWAT Officer", {
         "models/player/urban.mdl"
     },
     description = [[Backup the police, lead the raids, bring justice to the dirty DarkRP streets.]],
-    weapons = {"m9k_deagle", "weapon_cuff_police"},
+    weapons = {"m9k_deagle", "weapon_cuff_police", "zwf_sniffer"},
     command = "swatoff",
     max = 5,
     salary = 50,
@@ -209,7 +209,7 @@ TEAM_SWATC = DarkRP.createJob("SWAT Chief", {
     color = Color(0, 72, 255, 255),
     model = {"models/player/swat.mdl"},
     description = [[Lead the raiding team of the police.]],
-    weapons = {"m9k_deagle", "weapon_cuff_police"},
+    weapons = {"m9k_deagle", "weapon_cuff_police", "zwf_sniffer"},
     command = "swatchief",
     max = 1,
     salary = 70,
@@ -265,7 +265,7 @@ TEAM_MAYOR = DarkRP.createJob("Mayor", {
     color = Color(0, 0, 255, 255),
     model = {"models/player/breen.mdl"},
     description = [[Set laws in place to protect your citizens. Or protect you from you citizens. You entirely decide the presence of the government in everyday life.]],
-    weapons = {"m9k_remington1858", "weapon_cuff_police"},
+    weapons = {"m9k_remington1858", "weapon_cuff_police", "zwf_sniffer"},
     command = "mayor",
     max = 1,
     salary = 120,
