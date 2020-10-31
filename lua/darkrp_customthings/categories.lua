@@ -47,7 +47,9 @@ DarkRP.createCategory{
     categorises = "shipments",
     startExpanded = false,
     color = Color(0, 0, 0, 255),
-    canSee = function(ply) return table.HasValue({TEAM_BMD}, ply:Team()) end,
+    canSee = function(ply) 
+        return table.HasValue({TEAM_BMD}, ply:Team()) 
+    end,
     sortOrder = 10
 }
 
@@ -80,37 +82,40 @@ DarkRP.createCategory{
 
 DarkRP.createCategory{
     name = "Other",
-    categorises = "shipments",
+    categorises = "entities",
     startExpanded = false,
     color = Color(50, 50, 50, 255),
     canSee = function(ply) return true end,
     sortOrder = 30
 }
 
+
+
 DarkRP.createCategory{
     name = "Zero's Weed",
     categorises = "entities",
-    startExpanded = false,
-    color = Color(60, 181, 0, 255),
-    canSee = function(ply) return table.HasValue({TEAM_DRUG}, ply:Team()) end,
-    sortOrder = 0
+    startExpanded = true,
+    color = Color(60, 180, 0, 255),
+    canSee = function(ply) return table.HasValue({TEAM_DRUGD}, ply:Team()) end,
 }
 DarkRP.createCategory{
-    name = "Another Meth Mod",
+    name = "Advanced Meth",
     categorises = "entities",
-    startExpanded = false,
+    startExpanded = true,
     color = Color(0, 120, 255, 255),
-    canSee = function(ply) return table.HasValue({TEAM_DRUG}, ply:Team()) end,
-    sortOrder = 1
+    canSee = function(ply) return table.HasValue({TEAM_DRUGD}, ply:Team()) end,
 }
 DarkRP.createCategory{
     name = "Zero's Meth",
     categorises = "entities",
-    startExpanded = false,
-    color = Color(0, 212, 255, 255),
-    canSee = function(ply) return table.HasValue({TEAM_DRUG}, ply:Team()) end,
-    sortOrder = 2
+    startExpanded = true,
+    color = Color(0, 200, 255, 255),
+    canSee = function(ply)
+        return table.HasValue({TEAM_DRUGD}, ply:Team()) 
+    end,
 }
+
+
 
 DarkRP.createCategory{
     name = "Other",

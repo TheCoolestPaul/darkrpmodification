@@ -70,7 +70,7 @@ TEAM_SHITMAN = DarkRP.createJob("Hitman", {
     category = "Citizens"
 })
 
-TEAM_DRUG = DarkRP.createJob("Drug Dealer", {
+TEAM_DRUGD = DarkRP.createJob("Drug Dealer", {
     color = Color(255, 181, 0, 255),
     model = {
         "models/player/soldier_stripped.mdl",
@@ -229,7 +229,7 @@ TEAM_SWATC = DarkRP.createJob("SWAT Chief", {
 
 TEAM_HOBO = DarkRP.createJob("Hobo", {
     color = Color(0, 0, 0, 255),
-    model = {"models/player/corpse1.mdl"},
+    model = {"models/player/corpse1.mdl", "models/half-dead/Gopniks/extra/playermodelonly.mdl"},
     description = [[You are the lowest class. Hobo's are know to be extremely territorial. They KOS each other in the streets. Every hobo-on-hobo kill gains 100 max health. At 600 health you become the Hobo King.]],
     weapons = {"m9k_fists", "weapon_angryhobo"},
     command = "hobo",
@@ -244,7 +244,7 @@ TEAM_HOBO = DarkRP.createJob("Hobo", {
 
 TEAM_HOBOK = DarkRP.createJob("Hobo King", {
     color = Color(0, 0, 0, 255),
-    model = {"models/player/charple.mdl"},
+    model = {"models/player/charple.mdl", "models/half-dead/Gopniks/extra/playermodelonly.mdl"},
     description = [[You've earned this role through countless murders(6)... but can you maintain it? Or loose it terribly?]],
     weapons = {"m9k_fists", "weapon_angryhoboking"},
     command = "hobok",
