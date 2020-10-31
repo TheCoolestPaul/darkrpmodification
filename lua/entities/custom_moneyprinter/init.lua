@@ -8,6 +8,21 @@ include("shared.lua")
 ENT.SeizeReward = 950
 
 local PrintMore
+
+function ENT:SpawnFunction( ply, tr, ClassName )
+    if ( !tr.Hit ) then return end
+
+    local SpawnPos = tr.HitPos + tr.HitNormal * 16
+
+    local ent = ents.Create( ClassName )
+    ent:SetPos( SpawnPos )
+    ent:Spawn()
+    ent:Activate()
+    ent:Setowning_ent(ply)
+
+    return ent
+end
+
 function ENT:Initialize()
     self:SetModel("models/props_c17/consolebox03a.mdl")
     self:PhysicsInit(SOLID_VPHYSICS)
@@ -19,7 +34,7 @@ function ENT:Initialize()
     self.sparking = false
     self.damage = 100
     self.IsMoneyPrinter = true
-    timer.Simple(math.random(100, 350), function() PrintMore(self) end)
+    PrintMore(self)
 
     self.sound = CreateSound(self, Sound("ambient/levels/labs/equipment_printer_loop1.wav"))
     self.sound:SetSoundLevel(50)
@@ -76,41 +91,46 @@ end
 
 PrintMore = function(ent)
     if not IsValid(ent) then return end
-
-    ent.sparking = true
-    timer.Simple(3, function()
-        if not IsValid(ent) then return end
-        ent:CreateMoneybag()
+    timer.Create(("moneyPrinter"..ent:GetCreationID()), 10, 0, function()
+        ent.sparking = true
+        timer.Simple(2, function()
+            ent:CreateMoneyBag()
+        end)
     end)
 end
 
-function ENT:CreateMoneybag()
-    if not IsValid(self) or self:IsOnFire() then return end
+function ENT:CreateMoneyBag()
+    if not IsValid(self) or self:IsOnFire() then
+        if (timer.Exists("moneyPrinter"..self:GetCreationID())) then
+            timer.Destroy("moneyPrinter"..self:GetCreationID())
+        end
+     return 
+    end
 
     local MoneyPos = self:GetPos()
 
-    if GAMEMODE.Config.printeroverheat then
-        local overheatchance
-        if GAMEMODE.Config.printeroverheatchance <= 3 then
-            overheatchance = 22
-        else
-            overheatchance = GAMEMODE.Config.printeroverheatchance or 22
-        end
-        if math.random(1, overheatchance) == 3 then self:BurstIntoFlames() end
-    end
+    --TODO: Make something else...
+    --
+    --if GAMEMODE.Config.printeroverheat then
+    --    local overheatchance
+    --    if GAMEMODE.Config.printeroverheatchance <= 3 then
+    --        overheatchance = 22
+    --    else
+    --        overheatchance = GAMEMODE.Config.printeroverheatchance or 22
+    --    end
+    --    if math.random(1, overheatchance) == 3 then self:BurstIntoFlames() end
+    --end
 
-    local amount = GAMEMODE.Config.mprintamount
+    local amount = self:GetAmount()
     if amount == 0 then
         amount = 250
     end
 
     DarkRP.createMoneyBag(Vector(MoneyPos.x + 15, MoneyPos.y, MoneyPos.z + 15), amount)
     self.sparking = false
-    timer.Simple(math.random(100, 350), function() PrintMore(self) end)
 end
 
 function ENT:Think()
-
     if self:WaterLevel() > 0 then
         self:Destruct()
         self:Remove()
@@ -122,13 +142,16 @@ function ENT:Think()
     local effectdata = EffectData()
     effectdata:SetOrigin(self:GetPos())
     effectdata:SetMagnitude(1)
-    effectdata:SetScale(1)
-    effectdata:SetRadius(2)
+    effectdata:SetScale(2)
+    effectdata:SetRadius(0.25)
     util.Effect("Sparks", effectdata)
 end
 
 function ENT:OnRemove()
     if self.sound then
         self.sound:Stop()
+    end
+    if (timer.Exists("moneyPrinter"..self:GetCreationID())) then
+        timer.Destroy("moneyPrinter"..self:GetCreationID())
     end
 end

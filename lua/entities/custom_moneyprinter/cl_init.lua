@@ -8,7 +8,9 @@ end
 
 function ENT:Draw()
     self:DrawModel()
-
+    if ( self:GetPos():DistToSqr(LocalPlayer():GetPos()) > (200 * 200) ) then
+        return
+    end
     local Pos = self:GetPos()
     local Ang = self:GetAngles()
 
