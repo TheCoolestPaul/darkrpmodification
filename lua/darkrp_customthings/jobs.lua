@@ -17,6 +17,43 @@ https://darkrp.miraheze.org/wiki/DarkRP:CustomJobFields
     https://csite.io/tools/gmod-darkrp-job
 ---------------------------------------------------------------------------]]
 
+TEAM_GUARD = DarkRP.createJob("Guard", {
+    color = Color(165, 0, 0, 255),
+    model = {
+        "models/player/odessa.mdl",
+        "models/player/mossman_arctic.mdl"
+    },
+    description = [[You are hired to protect people or property. Bankers usually hire you the most.]],
+    weapons = {"m9k_sig_p229r"},
+    command = "guard",
+    max = 5,
+    salary = 15,
+    admin = 0,
+    vote = false,
+    hasLicense = true,
+    candemote = true,
+    category = "Citizens"
+})
+
+TEAM_BANK = DarkRP.createJob("Bank Worker", {
+    color = Color(55, 249, 0, 255),
+    model = {
+        "models/player/barney.mdl",
+        "models/player/gman_high.mdl",
+        "models/player/magnusson.mdl"
+    },
+    description = [[You can build in the "Official Bank" or make your own. Protect and manage people's possessions. You are the only person legally allowed to own/possess money printers. It is recommended that you hire a few guards.]],
+    weapons = {},
+    command = "banker",
+    max = 5,
+    salary = 15,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    category = "Citizens"
+})
+
 TEAM_GUN = DarkRP.createJob("Gun Dealer", {
     color = Color(255, 150, 0, 255),
     model = {"models/player/monk.mdl"},

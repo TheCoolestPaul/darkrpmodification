@@ -412,14 +412,15 @@ GM.Config.CategoryOverride = {
 
 -- The list of weapons admins spawn with, in addition to the default weapons, a job's weapons and GM.Config.AdminsCopWeapons.
 GM.Config.AdminWeapons = {
-    "weapon_keypadchecker",
+    --"weapon_keypadchecker",
+    "weapon_uni_admin_cracker",
 }
 
 -- These are the default laws, they're unchangeable in-game.
 GM.Config.DefaultLaws = {
     "Do not attack/murder other citizens except in self-defence.",
     "Do not steal or break into citizen's homes.",
-    "Printing money is ilegal.",
+    "Money printers are illegal except in the bank.",
 	"Marijuana is legal, but no other drugs are.",
 }
 
@@ -474,7 +475,7 @@ GM.Config.preventClassItemRemoval = {
 GM.Config.allowedProperties = {
     remover = true,
     ignite = false,
-    extinguish = true,
+    extinguish = false,
     keepupright = true,
     gravity = true,
     collision = true,
